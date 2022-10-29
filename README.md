@@ -1,1 +1,1 @@
-# parallel-prog
+# parallel-programming
