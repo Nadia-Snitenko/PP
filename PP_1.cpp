@@ -4,6 +4,7 @@
 #include <string>
 #include <ctime>
 #include <vector>
+#include <omp.h> //+
 
 using namespace std;
 
@@ -88,10 +89,13 @@ double** matrix_multiplication(size_t col1, size_t row1, size_t col2, size_t row
         return 0;
     }
     
-    // перемножение
     result = new double* [row1];
+    omp_set_num_threads(8);
+    #pragma omp parallel for shared(col1, row1, col2, row2, m,n) default(none)
+   
     for (int i = 0; i < row1; i++)
     {
+        //cout << omp_get_num_threads();
         result[i] = new double[col2];
         for (int j = 0; j < col2; j++)
         {
@@ -133,6 +137,7 @@ void write_matrix_to_fail(string name_of_fail,  size_t col,  size_t row,  double
 
 double** matrix_genetation(size_t x, size_t y)
 {
+
     double** a = new double* [x]; // Создаем массив указателей
     for (int i = 0; i < x; i++)
     {
@@ -173,7 +178,8 @@ int main()
     string name_4 = "time.txt";
     string name_5 = "counts.txt";
 
-        n_x = m_x = n_y = m_y = 4;
+        n_x = m_x = n_y = m_y = 1000;
+        int number_of_threads = 4;
         m = matrix_genetation(m_x, m_y);
         n = matrix_genetation(n_x, n_y);
         write_matrix_to_fail(name_1, m_x, m_y, m);
@@ -194,7 +200,9 @@ int main()
 
         unsigned int search_time = end_time - start_time; // искомое время
 
-        cout << "время работы: " << search_time / 1000.0;
+        cout << "время работы: " << search_time / 1000.0 <<endl;
+        //cout << "количество потоков: " << number_of_threads;
+
 
         const vector <int> counts = { 10, 50, 100, 150, 200, 250, 300,350, 400, 500, 600, 700, 800 ,900, 1000 };
         const vector <double> times = { 0, 0.001, 0.009, 0.035, 0.075, 0.133, 0.189,0.355, 0.488, 1.056, 2.281, 4.271, 6.979, 11.133 ,16.508 };
