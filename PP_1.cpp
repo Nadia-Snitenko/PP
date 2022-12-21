@@ -11,16 +11,21 @@ using namespace std
 int main(int argc, char* argv[])
 {
     int size = 1000;
-    const vector <int> counts = { 100, 150, 200, 250, 300,350, 400, 500, 600, 700, 800 ,900, 1000 };
-    const vector <double> times = { 0.009, 0.035, 0.075, 0.133, 0.189,0.355, 0.488, 1.056, 2.281, 4.271, 6.979, 11.133 ,16.508 };
-
+    const vector <int> sz_ = { 1, 2, 4, 8, 16 }; // кол-во потоков
+    const vector <int>  counts = { 100, 200, 300, 400, 1000 };
+    const vector <double> times_100 = { 65.723, 35.0897, 18.6335, 16.2153, 14.5683};
+    const vector <double> times_200 = { 525.259, 272.754, 136.308, 80.52, 60.4194 };
+    const vector <double> times_300 = { 1776.32, 895.574, 467.215,262.075,173.732 };
+    const vector <double> times_400 = { 4213.79, 2122.26, 1071.59, 568.666, 391.359 };
+    const vector <double> times_1000 = { 65765.8, 33445.7, 17128.5, 8984.03, 6557.63 };
+    
     int* matrix_1 = new int[size * size];
     int* matrix_2 = new int[size * size];
     int* result = new int[size * size];
 
     int process_rank;
 
-    // количество процессов:
+    // процессы:
     int comm_sz, local_N;
     int i, j, k;
 
