@@ -21,8 +21,8 @@
 
 **Графики**
 
-Матрицы: 100x100 - 400x400 элементов
+100x100 - 400x400 элементов
 ![time_100-400](https://user-images.githubusercontent.com/90641953/208877090-ca380a0f-5d1a-42a9-8b87-48aef8ef63c1.png)
 
-Матрица: 1000x1000 элементов
+1000x1000 элементов
 ![time_1000](https://user-images.githubusercontent.com/90641953/208877186-46757826-f6e7-4e28-bfb6-7a698af5fe9a.png)
