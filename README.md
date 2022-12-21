@@ -21,8 +21,8 @@
 
 **Графики**
 
-Размер матрицы: 100x100 - 400x400 элементов
-![time_100-400](https://user-images.githubusercontent.com/90641953/208870285-2d669eb2-b6e0-4dea-ba3e-f1fee924f421.png)
+Матрицы: 100x100 - 400x400 элементов
+![time_100-400](https://user-images.githubusercontent.com/90641953/208877090-ca380a0f-5d1a-42a9-8b87-48aef8ef63c1.png)
 
 Матрица: 1000x1000 элементов
-![image](https://user-images.githubusercontent.com/90641953/208862948-6ae48c63-0c56-4c64-92c7-ee34c5a704ba.png)
+![time_1000](https://user-images.githubusercontent.com/90641953/208877186-46757826-f6e7-4e28-bfb6-7a698af5fe9a.png)
