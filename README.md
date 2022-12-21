@@ -19,7 +19,7 @@
 
 #### Зависимость времени от количества процессов
 Размер матрицы: 100x100 - 400x400 элементов
-![time_100-400](https://user-images.githubusercontent.com/90641953/208870036-425af75e-db69-47d1-8806-c0d3fe144e72.png)
+![time_100-400](https://user-images.githubusercontent.com/90641953/208870285-2d669eb2-b6e0-4dea-ba3e-f1fee924f421.png)
 
 Матрица: 1000x1000 элементов
 ![image](https://user-images.githubusercontent.com/90641953/208862948-6ae48c63-0c56-4c64-92c7-ee34c5a704ba.png)
